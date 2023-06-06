@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_title %} My Blog {% endblock %}
+
+{% block css_files %}
+      <link rel="stylesheet" href="{% static "yo_blog/post.css" %}" />
+    <link rel="stylesheet" href="{% static "yo_blog/index.css" %}" />
+
+{% endblock %}
+
+{% block content %}
+
+    <section id ="welcome">
+    <header>
+        <img src="{% static "yo_blog/images/Olayinka.jpg" %}" alt="YO - The author of this blog"/>
+        <h2>YO's BLOG</h2>
+    </header>
+    <p>Hi, I am Yinka Oniyide(YO) and I love to blog about tech and the world!</p>
+    </section>
+    <section id="latest-posts">
+    <h2>My Latest Thoughts</h2>
+    <ul>
+       {% include "yo_blog/includes/post.html" %}
+    </ul>
+    </section>
+
+    <section id="about">
+    <h2>What I Do</h2>
+    <p>I am a Software Engineer, I love programming, problem-solving and exploring new technologies in general!</p>
+    <p>My goal is to keep on evolving as an engineer -- and if I could help you do same, I'd be very happy!</p>
+    </section>
+    <h1>Welcome to my blog</h1>
+{% endblock %}

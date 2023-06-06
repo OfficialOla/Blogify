@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %} My Blog {% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "yo_blog/post.css" %}" />
+    <link rel="stylesheet" href="{% static "yo_blog/all-posts.css" %}" />
+{% endblock %}
+
+{% block content %}
+    <section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+           {% include "yo_blog/includes/post.html" %}
+           {% include "yo_blog/includes/post.html" %}
+           {% include "yo_blog/includes/post.html" %}
+           {% include "yo_blog/includes/post.html" %}
+           {% include "yo_blog/includes/post.html" %}
+           {% include "yo_blog/includes/post.html" %}
+    </ul>
+    </section>
+
+{%  endblock %}
